@@ -12,3 +12,5 @@ jobs:
     steps:
     - name: Every time
       run: echo "This step will always run"
+    - name: Check environment variables
+      run: env
