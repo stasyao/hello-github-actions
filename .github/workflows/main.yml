@@ -14,3 +14,5 @@ jobs:
       run: echo "This step will always run"
     - name: Check environment variables
       run: env
+    - name: show github workspace directory content
+      run: ls -al ${{ GITHUB_WORKSPACE }}
