@@ -12,9 +12,11 @@ jobs:
     steps:
     - name: prepare current repository into runner
       uses: actions/checkout@v2
-    - name: Check environment variables
+    - name: check github actions environment variables
       run: env
-    - name: show github workspace directory content and current working directory
-      run: ls -al $GITHUB_WORKSPACE & pwd
+    - name: show runner environment variables
+      run: printenv
+    - name: show github workspace directory content
+      run: ls -al $GITHUB_WORKSPACE
     - name: show readme content
       run: cat ./README.md
