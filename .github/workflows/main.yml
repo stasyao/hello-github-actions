@@ -21,6 +21,6 @@ jobs:
       if: ${{ env.TEST_ENV == 'test' }}
       run: ls -al $GITHUB_WORKSPACE
     - name: add new env
-      run: echo "  ANOTHER_ENV:another_value" >> $GITHUB_ENV"
+      run: echo "  ANOTHER_ENV:another_value" >> $GITHUB_ENV
     - name: show added env variable
       run: echo $ANOTHER_ENV
