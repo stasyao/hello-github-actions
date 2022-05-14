@@ -20,6 +20,8 @@ jobs:
     - name: show github workspace directory content if value of TEST_ENV is 'test'
       if: ${{ env.TEST_ENV == 'test' }}
       run: ls -al $GITHUB_WORKSPACE
+    - name: check current job status
+      run: echo ${{ job.status }}
     - name: add new env
       run: echo "{ANOTHER_ENV}={another_value}" >> $GITHUB_ENV
     - name: show added env variable
