@@ -1,8 +1,8 @@
 name: Experiment
-on: 
-  schedule:
-  - cron: '0 */1 * * *'
-# on: [push]
+# on: 
+#   schedule:
+#   - cron: '0 */1 * * *'
+on: [push]
 
 jobs:
   job1:
