@@ -4,6 +4,9 @@ name: Experiment
 #   - cron: '0 */1 * * *'
 on: [push]
 
+env:
+  TEST_ENV: test
+
 jobs:
   job1:
     name: Debug
@@ -14,9 +17,8 @@ jobs:
       uses: actions/checkout@v2
     - name: check github actions environment variables
       run: env
-    - name: show runner environment variables
-      run: printenv
-    - name: show github workspace directory content
+    - name: show github workspace directory content if value of TEST_ENV is 'test'
+      if: ${{ env.TEST_ENV == 'test' }}
       run: ls -al $GITHUB_WORKSPACE
     - name: show readme content
       run: cat ./README.md
