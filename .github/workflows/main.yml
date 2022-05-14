@@ -20,7 +20,7 @@ jobs:
     - name: show github workspace directory content if value of TEST_ENV is 'test'
       if: ${{ env.TEST_ENV == 'test' }}
       run: ls -al $GITHUB_WORKSPACE
-    - name: show github_env file content
-      run: cat $GITHUB_ENV
-    - name: show readme content
-      run: cat ./README.md
+    - name: add new env
+      run: echo "  ANOTHER_ENV:another_value" >> $GITHUB_ENV"
+    - name: show added env variable
+      run: echo $ANOTHER_ENV
