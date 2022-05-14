@@ -15,4 +15,4 @@ jobs:
     - name: Check environment variables
       run: env
     - name: show github workspace directory content
-      run: ls -al ${{ GITHUB_WORKSPACE }}
+      run: ls -al $GITHUB_WORKSPACE
