@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Every time
-      run: echo "This step will always run"
+    - name: prepare current repository into runner
+      uses: actions/checkout@v2
     - name: Check environment variables
       run: env
     - name: show github workspace directory content
