@@ -12,5 +12,9 @@ jobs:
 #         run: echo "This step will be skipped on Monday and Wednesday"
       - name: show information about user
         run: id
+      - name: install Python
+        run: apt install python3
+      - name: run Python
+        run: python3 -c "print('hello')"
       - name: Every time
         run: echo "This step will always run"
